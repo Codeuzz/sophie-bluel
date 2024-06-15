@@ -1,0 +1,337 @@
+body, html {
+    max-width: 1140px;
+    scroll-behavior: smooth;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #FFFEF8;  
+}  
+
+header {
+    width: 100%;
+    margin: 0; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+    box-sizing: border-box;
+
+    div {
+
+        h1 {
+            font-family: 'Syne';
+            font-weight: 800;
+            color: #B1663C;
+            margin-bottom: -20px;
+        } 
+        p {
+            font-family: 'Work Sans';
+            text-transform: uppercase;
+            color: #93532F;
+            letter-spacing: 0.05em;
+        }
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+
+        a {
+            text-decoration: none; 
+            font-size: 20px; 
+            color: black;
+
+         }
+    }
+
+} 
+
+.presentation {
+    max-width: 100%;  
+    display: flex; 
+    flex-direction: row;
+    gap: 20px;  
+    align-items: center;    
+    justify-content: center;
+    margin: 50px auto 90px;
+
+    img {
+        width: 474px;
+    }
+
+    div {
+        width: 400px;
+
+        h1{
+            font-family: 'Syne';
+            color: #1D6154;
+        }
+        p {
+            font-family: 'Work Sans';   
+            font-size: 14px; 
+        }
+    } 
+}
+
+.mes-projets {
+    width: 100%; 
+    margin: 0 auto 0;   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;  
+
+    h1 {
+        font-family: 'Syne';
+        color:#1D6154; 
+
+    }
+    .categories {
+        button {
+            box-sizing: border-box;
+            padding: 7px 10px;   
+            border-radius: 15px;   
+            border: 1px solid #1D6154 ;
+            font-family: 'Syne';
+            color: #1D6154;
+            font-weight: 600; 
+            background-color: white; 
+    
+            &:hover {
+                cursor: pointer;
+                color: white;
+                background-color: #64c98e;
+            }
+    
+        }
+    }
+    .card-container {
+        display: grid;
+        grid-template-columns: auto auto auto; 
+        gap: 5px 15px;      
+        .card {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 200px; 
+                display: block;  
+            }
+            p {
+                font-family: 'Work Sans';
+                color: #3D3D3D; 
+                font-size: 13px; 
+                margin-top: 0;
+
+            } 
+        }
+        
+    }
+
+}
+
+.contact {
+    width: 100%; 
+    margin: 0 auto;
+
+    div {
+        width: 100%; 
+        margin: 0 auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: space-around; 
+
+        h1 {
+            font-family: 'Syne'; 
+            color: #1D6154;
+            margin-bottom: 5px;      
+        }
+        p {
+            font-family: 'Work Sans';
+            color: #3D3D3D;
+        }
+    }
+
+    form { 
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 20px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        font-family: 'Work Sans';
+        color: #3D3D3D;
+        font-size: 16px;
+        
+         
+
+        div {
+            width: 379px;  
+            display: flex;
+            flex-direction: column; 
+
+            label, input {
+                display: block;  
+            }
+
+            input, textarea {
+                width: 379px; 
+            }
+
+            input {
+                margin-bottom: 30px;
+                border: none;
+                box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+                height: 51px; 
+            } 
+            label {
+                align-self: flex-start;  
+            }
+            textarea {
+                box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+                border: none; 
+                resize: none; 
+            }
+
+
+        }
+
+        button {
+            box-sizing: border-box;
+            padding: 7px 10px;   
+            border-radius: 15px; 
+            border: none;  
+            font-family: 'Work Sans';
+            color: white;
+            background-color: #1D6154;   
+            margin-top: 50px;
+            width: 179px;  
+            
+            &:hover {
+                cursor: pointer; 
+            }
+            }
+
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    header {
+       flex-direction: column;
+       font-size: 2rem;
+
+       nav {
+            gap: 40px;
+            a {
+                font-size: 2rem; 
+            }
+       }
+    }
+
+    .presentation {
+        display: flex;
+        flex-direction: column;
+        width:  700px;
+
+        img {
+            width: 100%;   
+            margin: 0 auto; 
+            margin-bottom: -10px; 
+        }
+
+        div {
+            width: 90%; 
+            padding: 20px;
+            height: 100%;
+
+            h1 {
+                font-size: 3rem; 
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    } 
+
+    .mes-projets {
+
+        h1 {
+            font-size: 3rem;
+        }
+        .categories {
+            gap: 20px; 
+            button {
+                font-size: 1.5rem; 
+            }
+        }
+        .card-container {
+            display: grid; 
+            grid-template-columns: auto;  
+            justify-content: center;
+            align-items: center;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    background-color: red;
+                    min-width: 350px;
+                }
+                p {
+                    font-size: 1.6rem;
+                    margin-top: 0px;
+                }
+
+            }
+
+        }
+    }
+
+    .contact {
+        width: 100%;
+        margin: 50px auto 70px;
+
+
+        div {
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.5rem; 
+            }
+        }
+
+        form {
+            font-size: 2rem;
+
+            div {
+                width: 70%;
+                input, textarea {
+                    width: 100%; 
+                }
+            }
+
+            button {
+                width: 40%;
+                font-size: 2rem;
+            }
+        }
+
+        
+    }
+}
+
+ 
+
+
+
+
+
